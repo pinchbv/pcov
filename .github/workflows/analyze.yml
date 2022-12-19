@@ -1,0 +1,36 @@
+name: Analyze
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+
+jobs:
+  analyze:
+    runs-on: self-hosted
+
+    steps:
+      - uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+          if_key_exists: ignore
+
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Analyze
+        run: dart analyze
+
+      - name: Run tests
+        run: dart test
+
+      - name: Check formatting
+        run: |
+          dart format -o none --set-exit-if-changed bin/
+          dart format -o none --set-exit-if-changed lib/
