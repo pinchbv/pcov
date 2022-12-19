@@ -13,21 +13,25 @@ class GetPcovConfiguration {
   }) {
     final fileNamesToExclude = <String>[];
     final fileContentToExclude = <String>[];
-    final YamlMap configuration =
-        loadYaml(File(configurationFilePath).readAsStringSync());
-    if (configuration.containsKey(_excludeKey)) {
-      final YamlMap excludes = configuration[_excludeKey];
+    final pcovConfigurationFile = File(configurationFilePath);
 
-      // Check for file names and remove if needed
-      if (excludes.containsKey(_fileNameKey)) {
-        final fileNamesFromYaml = excludes[_fileNameKey];
-        fileNamesToExclude.addAll(List<String>.from(fileNamesFromYaml));
-      }
+    if (pcovConfigurationFile.existsSync()) {
+      final pcovYamlContent = pcovConfigurationFile.readAsStringSync();
+      final YamlMap configuration = loadYaml(pcovYamlContent);
+      if (configuration.containsKey(_excludeKey)) {
+        final YamlMap excludes = configuration[_excludeKey];
 
-      // Check for file content and remove if needed
-      if (excludes.containsKey(_contentKey)) {
-        final contentFromYaml = excludes[_contentKey];
-        fileContentToExclude.addAll(List<String>.from(contentFromYaml));
+        // Check for file names and remove if needed
+        if (excludes.containsKey(_fileNameKey)) {
+          final fileNamesFromYaml = excludes[_fileNameKey];
+          fileNamesToExclude.addAll(List<String>.from(fileNamesFromYaml));
+        }
+
+        // Check for file content and remove if needed
+        if (excludes.containsKey(_contentKey)) {
+          final contentFromYaml = excludes[_contentKey];
+          fileContentToExclude.addAll(List<String>.from(contentFromYaml));
+        }
       }
     }
 
