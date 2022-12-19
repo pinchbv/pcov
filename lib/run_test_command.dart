@@ -8,7 +8,10 @@ class RunTestCommand {
     final completer = Completer();
     final commandSplitted = command.split(' ');
     final executable = commandSplitted.first;
-    final arguments = commandSplitted.getRange(1, commandSplitted.length).toList(growable: false);
+    final arguments = commandSplitted
+        .getRange(1, commandSplitted.length)
+        .toList(growable: false);
+
     final process = await Process.start(executable, arguments);
     process.stdout.listen(
       stdout.add,

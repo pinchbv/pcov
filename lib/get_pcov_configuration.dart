@@ -13,7 +13,8 @@ class GetPcovConfiguration {
   }) {
     final fileNamesToExclude = <String>[];
     final fileContentToExclude = <String>[];
-    final YamlMap configuration = loadYaml(File(configurationFilePath).readAsStringSync());
+    final YamlMap configuration =
+        loadYaml(File(configurationFilePath).readAsStringSync());
     if (configuration.containsKey(_excludeKey)) {
       final YamlMap excludes = configuration[_excludeKey];
 

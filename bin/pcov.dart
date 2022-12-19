@@ -57,7 +57,10 @@ Future<void> _run({
 
   // Create content for file in test folder that will reference all files as imports
   final packageName = GetPackageName().call();
-  CreateFileReferences().call(packageName: packageName, filePaths: filePaths, tempFilePath: _tempFilePath);
+  CreateFileReferences().call(
+      packageName: packageName,
+      filePaths: filePaths,
+      tempFilePath: _tempFilePath);
 
   RunTestCommand().call(command: testCommand);
 
