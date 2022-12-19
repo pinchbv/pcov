@@ -1,0 +1,6 @@
+exclude:
+  file_name:
+    - '*.g.dart'
+    - '*.freezed.dart'
+  content:
+    - 'class * extends Widget *'
