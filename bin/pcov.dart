@@ -10,7 +10,7 @@ import 'package:pcov/remove_files_for_content.dart';
 import 'package:pcov/remove_files_for_names.dart';
 import 'package:pcov/run_test_command.dart';
 
-const _tempFilePath = './test/pcov_test.dart';
+const _tempFilePath = './test/pcov_temp_test.dart';
 const _testCommandKey = 'test-command';
 const _defaultTestCommand = 'flutter test --coverage';
 

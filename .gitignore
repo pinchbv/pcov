@@ -5,8 +5,15 @@
 # Conventional directory for build output.
 build/
 
+# Coverage output
+coverage/
+
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
 .idea/
+
+# Example output
+example/coverage/
+example/test/pcov_temp_test.dart
