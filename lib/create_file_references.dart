@@ -1,6 +1,10 @@
 import 'dart:io';
 
+/// Creates a temporary Dart file with references for all the supplied file paths.
 class CreateFileReferences {
+  /// Create references for all the supplied [filePaths].
+  ///
+  /// A temporary Dart file will be created at [tempFilePath] that will contain all the given [filePaths] as imports.
   void call({
     required String packageName,
     required List<String> filePaths,

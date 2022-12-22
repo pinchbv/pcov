@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
+/// Execute test command
 class RunTestCommand {
+  /// Executes the given [command]
   Future<void> call({
     required String command,
   }) async {
