@@ -8,8 +8,8 @@ class RemoveFilesForContent {
     final mutableFilePaths = List<String>.from(filePaths);
 
     final contentPatterns = fileContentToExclude
-        .map((pattern) => pattern.replaceAll('*', r'[\S\s]*')) // Convert * to regex wildcard pattern
-        .map((pattern) => RegExp(pattern)) // Map to RegExp objects
+        .map((pattern) => pattern.replaceAll('*', r'[\S\s]*'))
+        .map((pattern) => RegExp(pattern))
         .toList(growable: false);
 
     mutableFilePaths.removeWhere((filePath) => _containsContent(

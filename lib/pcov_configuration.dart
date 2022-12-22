@@ -15,8 +15,10 @@ class PcovConfiguration {
       other is PcovConfiguration &&
           runtimeType == other.runtimeType &&
           ListEquality().equals(fileNamesToExclude, other.fileNamesToExclude) &&
-          ListEquality().equals(fileContentToExclude, other.fileContentToExclude);
+          ListEquality()
+              .equals(fileContentToExclude, other.fileContentToExclude);
 
   @override
-  int get hashCode => fileNamesToExclude.hashCode ^ fileContentToExclude.hashCode;
+  int get hashCode =>
+      fileNamesToExclude.hashCode ^ fileContentToExclude.hashCode;
 }
