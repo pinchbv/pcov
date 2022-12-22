@@ -1,3 +1,4 @@
+[![pub package](https://img.shields.io/pub/v/pcov.svg)](https://pub.dartlang.org/packages/pcov)
 [![codecov](https://codecov.io/gh/pinchbv/pcov/branch/develop/graph/badge.svg?token=Wuf1i3qiTc)](https://codecov.io/gh/pinchbv/pcov)
 
 ## About
