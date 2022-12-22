@@ -1,7 +1,9 @@
 name: pcov
-description: A sample command-line application.
+description: >
+  The CLI tool that makes your testing easier. Include untested files and exclude files through
+  your own configuration.
 version: 1.0.0
-# homepage: https://www.example.com
+homepage: https://pinch.nl/en
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
@@ -9,7 +11,7 @@ environment:
 dependencies:
   args: ^2.3.1
   yaml: ^3.1.1
-  collection: ^1.17.0
+  collection: ^1.16.0
 
 dev_dependencies:
   lints: ^2.0.0

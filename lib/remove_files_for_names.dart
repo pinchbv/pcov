@@ -9,8 +9,8 @@ class RemoveFilesForNames {
 
     final fileNamePatterns = fileNamesToExclude
         .map((pattern) => pattern.replaceAll('.', '\\.')) // Escape dots
-        .map((pattern) => pattern.replaceAll('*', r'.*')) // Convert * to regex wildcard pattern
-        .map((pattern) => RegExp(pattern)) // Map to RegExp objects
+        .map((pattern) => pattern.replaceAll('*', r'.*'))
+        .map((pattern) => RegExp(pattern))
         .toList(growable: false);
 
     mutableFilePaths.removeWhere((filePath) => _containsFileName(
