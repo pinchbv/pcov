@@ -1,3 +1,10 @@
+## 1.0.1
+
+- **FIX**: Add additional documentation in code.
+- **FIX**: Add pub.dev badge
+- **FIX**: Add readme in example
+- **FIX**: Add repository and issue tracker links
+
 ## 1.0.0
 
 Initial version!

@@ -2,7 +2,7 @@ name: pcov
 description: >
   The CLI tool that makes your testing easier. Include untested files and exclude files through
   your own configuration.
-version: 1.0.0
+version: 1.0.1
 homepage: https://pinch.nl/en
 repository: https://github.com/pinchbv/pcov
 issue_tracker: https://github.com/pinchbv/pcov/issues
