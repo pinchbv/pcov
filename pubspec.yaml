@@ -4,6 +4,8 @@ description: >
   your own configuration.
 version: 1.0.0
 homepage: https://pinch.nl/en
+repository: https://github.com/pinchbv/pcov
+issue_tracker: https://github.com/pinchbv/pcov/issues
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
