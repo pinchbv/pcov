@@ -1,15 +1,3 @@
-[![pub package](https://img.shields.io/pub/v/pcov.svg)](https://pub.dartlang.org/packages/pcov)
-[![codecov](https://codecov.io/gh/pinchbv/pcov/branch/develop/graph/badge.svg?token=Wuf1i3qiTc)](https://codecov.io/gh/pinchbv/pcov)
-
-## About
-
-Getting your test coverage through `flutter test --coverage` can be a bit misleading, since this 
-will only take the files into account that you touched in your tests. With `pcov` you can get the
-actual coverage of your project, including untested files, as well as exclude files based on name
-or content. This can come in handy for things like generated files or widgets for example.
-
----
-
 ## Getting Started
 
 Install the latest Pcov version as a global package via [Pub](https://pub.dev/).
