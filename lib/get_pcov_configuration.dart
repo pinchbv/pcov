@@ -3,11 +3,13 @@ import 'dart:io';
 import 'package:pcov/pcov_configuration.dart';
 import 'package:yaml/yaml.dart';
 
+/// Gets the Pcov configuration
 class GetPcovConfiguration {
   static const _excludeKey = 'exclude';
   static const _fileNameKey = 'file_name';
   static const _contentKey = 'content';
 
+  /// Returns a [PcovConfiguration] for the configuration defined in the [configurationFilePath]
   PcovConfiguration call({
     String configurationFilePath = 'pcov.yaml',
   }) {

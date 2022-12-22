@@ -1,6 +1,8 @@
 import 'dart:io';
 
+/// Removes files based on file content
 class RemoveFilesForContent {
+  /// Removes filePaths of files containing content of any given [fileContentToExclude] entries.
   List<String> call({
     required List<String> filePaths,
     required List<String> fileContentToExclude,
