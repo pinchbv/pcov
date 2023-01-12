@@ -1,3 +1,7 @@
+## 1.0.3
+
+- **FIX**: Downgrade Dart version constraint to 2.17.0.
+
 ## 1.0.2
 
 - **FIX**: Add executable for pcov.

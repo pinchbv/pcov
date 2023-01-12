@@ -2,13 +2,13 @@ name: pcov
 description: >
   The Pinch coverage CLI tool that makes your testing easier. Include untested files and exclude 
   files through your own configuration.
-version: 1.0.2
+version: 1.0.3
 homepage: https://pinch.nl/en
 repository: https://github.com/pinchbv/pcov
 issue_tracker: https://github.com/pinchbv/pcov/issues
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
+  sdk: '>=2.17.0 <3.0.0'
 
 executables:
   pcov:
