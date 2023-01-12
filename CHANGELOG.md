@@ -1,3 +1,7 @@
+## 1.0.2
+
+- **FIX**: Add executable for pcov.
+
 ## 1.0.1
 
 - **FIX**: Add additional documentation in code.
